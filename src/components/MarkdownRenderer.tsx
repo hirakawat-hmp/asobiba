@@ -6,7 +6,6 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { Link } from "@heroui/react";
 
 interface MarkdownRendererProps {
   content: string;
@@ -41,9 +40,9 @@ export function MarkdownRenderer({ content }: MarkdownRendererProps) {
           ),
           p: ({ children }) => <p className="my-4 leading-7">{children}</p>,
           a: ({ href, children }) => (
-            <Link href={href} className="text-blue-600 hover:text-blue-800">
+            <a href={href} className="text-blue-600 hover:text-blue-800 underline">
               {children}
-            </Link>
+            </a>
           ),
           code({ inline, className, children, ...props }: any) {
             const match = /language-(\w+)/.exec(className || "");

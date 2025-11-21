@@ -2,7 +2,8 @@ import { notFound } from "next/navigation";
 import { getPostBySlug, getAllPosts, extractTableOfContents } from "@/lib/markdown";
 import { MarkdownRenderer } from "@/components/MarkdownRenderer";
 import { TableOfContents } from "@/components/TableOfContents";
-import { Chip, Link, Button } from "@heroui/react";
+import { Chip, Button } from "@heroui/react";
+import Link from "next/link";
 
 interface PageProps {
   params: Promise<{ slug: string }>;

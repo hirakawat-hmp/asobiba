@@ -1,5 +1,6 @@
 import { getAllPosts, getAllCategories, getAllTags } from "@/lib/markdown";
-import { Card, Chip, Link } from "@heroui/react";
+import { Card, Chip } from "@heroui/react";
+import Link from "next/link";
 
 export const metadata = {
   title: "Blog",
